@@ -1,36 +1,44 @@
+
 <html>
   <head>
-    <link rel="stylesheet" href="/css/home.css" />
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/home.css" /> 
+
     {{!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> --}}
+
   </head>
-  <body>
-    <center>
-      <h2 id="quote">A bargain is something you can’t use at a price you can’t resist!</h2>
-    
-    </center>
-    <div id="top">
-      <input type="text" placeholder="What are you looking to shop for..." id="search">
-      <img src="/assets/location.png" alt="lala" class="element" id="clickme">
-    </div>
-    
-    {{!-- <button type="button" class="element" id="location"></button> --}}
-    <center>
-      <div style="width:1000px; margin-top: 200px;">
-        <div class="card">
-          <div class="container">
-            <h4 style="color: black">John Doe</h4>
-            <p>Architect & Engineer</p>
-          </div>
-          <br>
-    
+  <body>  
+    <div class="container-fluid">
+      <div class="row">
+        <center>
+          <h2 id="quote">A bargain is something you can’t use at a price you can’t resist!</h2>        
+        </center>
+      </div>
+      <div class="row">
+        <div id="top">
+        <input type="text" placeholder="What are you looking to shop for..." id="search">
+        <img src="/assets/location.png" alt="lala" class="element" id="locate">
         </div>
-        <div class="card">
-          <div class="container">
-            <h4 style="color: black;">John Doe</h4>
-            <p>Architect & Engineer</p>
+        
+        <center>
+          <div style="width:1000px; margin-top: 200px;">
+            <div class="card">
+              <div class="container">
+                <h4 style="color: black;">John Doe</h4>
+                <p>Architect & Engineer</p>
+              </div>
+              <br>
+        
+            </div>
+            <div class="card">
+              <div class="container">
+                <h4 style="color: black;">John Doe</h4>
+                <p>Architect & Engineer</p>
+              </div>
+            </div>
           </div>
-        </div>
+        </center>
       </div>
     </center>
 <script src="/js/customer.js"></script>
