@@ -7,7 +7,7 @@ const itemSchema = new mongoose.Schema({
     shops: [
         {
             shopId: {
-                type: mongoose.Schema.Types.ObjectId,
+                type: mongoose.Schema.Types.ObjectId,     // _id of the shop document
                 ref: 'user'
             },
             shopName: {

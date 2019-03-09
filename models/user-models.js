@@ -17,9 +17,8 @@ const userSchema = new Schema({
     },
     items: [
         {
-            item: {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: 'items'
+            itemId: {
+                type: String
             }
         }
     ]

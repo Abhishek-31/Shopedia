@@ -17,8 +17,17 @@ router.get('/', authCheck, (req, res) => {
     res.render('profile', {user: req.user})
 })
 
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard')
+})
+
+// {
+//     shopName,
+//     locationString,
+//     latitude,
+//     longitude
+// }
 router.post('/postshop', authCheck, (req, res) => {
-    console.log(req.body)
     User.findOneAndUpdate({googleId: req.user.googleId}, 
         {$set: {shopName: req.body.shopName, 
                 locationString: req.body.locationString, 
@@ -29,27 +38,39 @@ router.post('/postshop', authCheck, (req, res) => {
                 }
         })
         .then(user => {
-            res.redirect('/profile')
+            res.redirect('/profile/dashboard')
         })
 })
 
 router.post('/postitem', (req, res) => {
+    var itemId = ""
+    req.body.itemName = req.body.itemName.toLowerCase()
     Item.findOne({itemName: req.body.itemName})
         .then(item => {
             if(item) {
                 // Update item with shop's ID and name
-                Item.findOneAndUpdate({itemName: req.body.itemName}, {$push: {shops: {shopId: req.body.shopId, shopName: req.body.shopName}}})
+                itemId = item._id
+                Item.findOneAndUpdate({itemName: req.body.itemName}, {$push: {shops: {shopId: req.user._id, shopName: req.user.shopName}}})
                 .then(item => res.send(item))
             } else {
                 // Add new item. Tested, working
                 var newitem = {
                     itemName: req.body.itemName,
                     shops: [{
-                        shopName: req.body.shopName
+                        shopName: req.user.shopName,
+                        shopId: req.user._id
                     }]
                 }
                 newitem = new Item(newitem)
-                newitem.save().then(item => res.send(item))
+                newitem.save().then(item => {
+                    itemId = item._id
+                    return Promise.resolve()
+                }).then(() => {
+                    User.findOneAndUpdate({ googleId: req.user.googleId }, { $push: { items: { itemName: itemId } } })
+                        .then(user => {
+                            res.send(user)
+                        })
+                })
             }
         })
 })
