@@ -17,8 +17,17 @@ router.get('/', authCheck, (req, res) => {
     res.render('profile', {user: req.user})
 })
 
+router.get('/dashboard', (req, res) => {
+    res.render('dashboard')
+})
+
+// {
+//     shopName,
+//     locationString,
+//     latitude,
+//     longitude
+// }
 router.post('/postshop', authCheck, (req, res) => {
-    console.log(req.body)
     User.findOneAndUpdate({googleId: req.user.googleId}, 
         {$set: {shopName: req.body.shopName, 
                 locationString: req.body.locationString, 
@@ -29,11 +38,12 @@ router.post('/postshop', authCheck, (req, res) => {
                 }
         })
         .then(user => {
-            res.redirect('/profile')
+            res.redirect('/profile/dashboard')
         })
 })
 
 router.post('/postitem', (req, res) => {
+    let itemId
     Item.findOne({itemName: req.body.itemName})
         .then(item => {
             if(item) {
@@ -49,8 +59,16 @@ router.post('/postitem', (req, res) => {
                     }]
                 }
                 newitem = new Item(newitem)
-                newitem.save().then(item => res.send(item))
+                newitem.save().then(item => {
+                    itemId = item._id
+                    console.log(item)
+                })
             }
+        }).then(() => {
+            User.findOneAndUpdate({googleId: req.user.googleId}, {$push: {items: {item: itemId}}})
+            .then(user => {
+                res.send(user)
+            })
         })
 })
 
