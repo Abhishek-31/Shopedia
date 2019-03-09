@@ -1,70 +1,20 @@
-<!DOCTYPE html>
 <html>
+		<link rel="stylesheet" href="/css/home.css" />
+<body>	
+<h1 align="center"  style="font:sans-serif; margin-top: 150px;padding-bottom:60px"><b>Enter your shop details</h1>
+<form method="POST" action="/profile/postshop">
+	<center>
+	<!-- Shopname: <br> -->
+	<input type="text" name="shopname" placeholder="Enter your shop's name" style="width: 50%"><br>
+	<!-- Location: <br> -->
+	<div style="height: 60px;">
+			<input type="text" name="location" placeholder="Enter location or enable location access" style="width: 50%">
+			<img src="/home/gs99/shopedia/1x/baseline_gps_fixed_black_48dp.png" alt="getlocation">
 
-<head>
-    <meta charset="utf-8">
-    <title>OAuth Tutorials</title>
-    <style>
-        body {
-            font-family: arial;
-            margin: 0;
-        }
-
-        nav {
-            background: #ff5353;
-            padding: 20px 10px;
-        }
-
-        nav ul {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0;
-        }
-
-        nav li {
-            list-style-type: none;
-            display: inline-block;
-            margin: 0 10px 0 0;
-        }
-
-        nav a {
-            color: #fff;
-            font-size: 18px;
-            background: rgba(255, 255, 255, 0.2);
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-        }
-
-        main,
-        header {
-            max-width: 960px;
-            margin: 30px auto;
-            padding: 0 10px;
-            color: #333;
-        }
-    </style>
-</head>
-
-<body>
-    <nav>
-        <ul>
-            <li><a href="/auth/logout">Logout</a></li>
-            <li><a href="/auth/login">Login</a></li>
-            <li><a href="/">Homepage</a></li>
-        </ul>
-    </nav>
-    <header>
-        <h1>Welcome to your profile, {{user.username}}</h1>
-    </header>
-    <main>
-        <img src="{{user.thumbnail}}">
-        <form method="POST" action="/profile/postshop">
-            <p>Please add your shop name!</p>
-            <input type="text" name="shopName" />
-            <input type="submit" />
-        </form>
-    </main>
+	</div>
+	<input type="submit" name="submit" value="Submit"><br>
+	</b>
+</center>
+</form>
 </body>
-
 </html>
