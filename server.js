@@ -27,11 +27,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(passport.initialize())
 app.use(passport.session())
 
+app.set('view engine', 'hbs');
+app.use(express.static(__dirname + '/views'))
+
 app.use('/auth', authRoutes)
 app.use('/profile', profileRoutes)
-
-app.set('view engine', 'hbs');
-app.use(express.static(__dirname+'/views'))
 
 app.get('/', (req, res) => {
     res.render('home', {user: req.user});

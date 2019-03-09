@@ -1,63 +1,101 @@
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <title>{{req.user.username}}</title>
-    <style>
-        body {
-            font-family: arial;
-            margin: 0;
-        }
+<head>
+    <title>Welcome, Shopkeeper!</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/dash.css" />
+</head>
 
-        nav {
-            background: #ff5353;
-            padding: 20px 10px;
-        }
+<body>
 
-        nav ul {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0;
-        }
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-        nav li {
-            list-style-type: none;
-            display: inline-block;
-            margin: 0 10px 0 0;
-        }
+        <!-- Banner -->
+        <section id="banner" class="major">
+            <div class="inner">
+                <header class="major">
+                    <h1>Hi, my name is Forty</h1>
+                </header>
+                <div class="content">
+                    <p>Some Slogan for the shop</p>
+                </div>
+            </div>
+        </section>
 
-        nav a {
-            color: #fff;
-            font-size: 18px;
-            background: rgba(255, 255, 255, 0.2);
-            text-decoration: none;
-            padding: 10px;
-            display: block;
-        }
+        <!-- Contact -->
+        <section id="contact">
+            <div class="inner">
+                <section>
+                    <div class="table">
+                        <table>
+                            <tr>
+                                <th>Item</th>
+                                <th>Quantity</th>
+                            </tr>
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <section class="split">
+                    <section>
+                        <div class="contact-method">
+                            <span class="icon alt fa-envelope"></span>
+                            <h3>Email</h3>
+                            <a href="#">information@untitled.tld</a>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="contact-method">
+                            <span class="icon alt fa-phone"></span>
+                            <h3>Phone</h3>
+                            <span>(0175) 2506 3490</span>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="contact-method">
+                            <span class="icon alt fa-home"></span>
+                            <h3>Address</h3>
+                            <span>1234 Somewhere Road #5432<br />
+                                Nashville, TN 00000<br />
+                                United States of America</span>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
 
-        main,
-        header {
-            max-width: 960px;
-            margin: 30px auto;
-            padding: 0 10px;
-            color: #333;
-        }
-    </style>
-    </head>
-    <body>
-        <div>
-            <nav>
-                <ul>
-                    <li><a href="/auth/logout">Logout</a></li>
-                    <li><a href="/auth/login">Login</a></li>
-                    <li><a href="/">Homepage</a></li>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="#" class="icon alt fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+                    <li><a href="#" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+                    <li><a href="#" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
                 </ul>
-            </nav>
-            <form action="/profile/postitem" method="POST">
-                <input type="text" name="itemName">
-                <input type="submit">
-            </form>
-        </div>
-    </body>
-<script>
-</script>
+                <ul class="copyright">
+                    <li>&copy; Untitled</li>
+                    <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+                </ul>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/dashutil.js"></script>
+    <script src="assets/js/dash.js"></script>
+
+</body>
 
 </html>
