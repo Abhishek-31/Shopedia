@@ -32,7 +32,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-
 ol, ul {
 	list-style: none;
 }
@@ -227,8 +226,9 @@ input, select, textarea {
     }
     #search{
         float:left;
-        width: 700px;
-        margin-left: 50px;
+				width:50%;
+				width:200%;
+        align:center;
     }
     .card {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -246,7 +246,6 @@ input, select, textarea {
         padding: 2px 16px;
         color: black;
         border-radius: 10px;
-
         background-color: white;
       }
       

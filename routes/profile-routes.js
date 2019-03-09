@@ -14,7 +14,12 @@ const authCheck = (req, res, next) => {
 }
 
 router.get('/', authCheck, (req, res) => {
-    res.render('profile', {user: req.user})
+    if(!req.user.shopName) {
+        res.render('location_post', {user: req.user})
+    } else {
+        var user = addItems(req.user)
+        res.redirect('/profile/dashboard')
+    }
 })
 
 router.get('/dashboard', (req, res) => {
@@ -39,7 +44,9 @@ router.post('/postshop', authCheck, (req, res) => {
                 }
         })
         .then(user => {
-            res.redirect('/profile/dashboard')
+            req.user.shopName = user.shopName
+            res.send(200)
+            // res.redirect('')
         })
 })
 
