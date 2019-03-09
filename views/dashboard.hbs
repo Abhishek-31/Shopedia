@@ -6,7 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="/css/dash.css" />
 </head>
+<style>
+    .add{
+        font-size:15px;
+        border-radius:50%;
+    }
+</style>
+<script>
+    function add() {
 
+        var table = document.getElementById("tab");
+        var row=table.insertRow(2);
+var cell1=row.insertCell(0);
+var cell2 = row.insertCell(1);
+var input1=document.createElement("input");
+input1.setAttribute("type","text");
+var input2=document.createElement("input");
+input2.setAttribute("type","text");
+cell1.appendChild(input1);
+cell2.appendChild(input2);
+
+        }
+</script>
 <body>
 
     <!-- Wrapper -->
@@ -19,7 +40,7 @@
                     <h1>Hi, my name is {{user.username}}</h1>
                 </header>
                 <div class="content">
-                    <p>Some Slogan for the shop</p>
+                    <p>{{user.username}},Santa Claus of {{user.shopName}} is providing following items:</p>
                 </div>
             </div>
         </section>
@@ -29,41 +50,39 @@
             <div class="inner">
                 <section>
                     <div class="table">
-                        <table>
+                        <table id="tab">
                             <tr>
                                 <th>Item</th>
                                 <th>Quantity</th>
                             </tr>
                             <tr>
-                                <td>Computer Graphics by Utkarsh Singh</td>
-                                <td>5</td>
+                                <td>Sample Data</td>
+                                <td>SAmple quantity</td>
                             </tr>
                             <tr>
-                                <td>Broomstick for Abhishek</td>
-                                <td>100</td>
-                            </tr>
-                            <tr>
-                                <td>Sprite by Deepesh</td>
-                                <td>1000</td>
+                                <td><input type="text" ></td>
+                                <td><input type="text"></td>
                             </tr>
                         </table>
+                    <button class="btn add" type="button" onclick="add()">+</button>
                     </div>
                 </section>
                 <section class="split">
                     <section>
                         <div class="contact-method">
-                            <span class="icon alt fa-phone"></span>
-                            <h3>Phone</h3>
-                            <span>(0175) 2506 3490</span>
+<<<<<<< HEAD
+                            <span class="icon alt fa-home"></span>
+                            <h3>Address</h3>
+                            <span>{{user.address}}</span>
                         </div>
                     </section>
                     <section>
                         <div class="contact-method">
-                            <span class="icon alt fa-home"></span>
-                            <h3>Address</h3>
-                            <span>1234 Somewhere Road #5432<br />
-                                Nashville, TN 00000<br />
-                                United States of America</span>
+=======
+>>>>>>> 011cb9505fd0d8242a576ad6b83ccac6b619cfec
+                            <span class="icon alt fa-phone"></span>
+                            <h3>Phone</h3>
+                            <span><input type="text"></span>
                         </div>
                     </section>
                 </section>
@@ -71,6 +90,9 @@
         </section>
 
         <!-- Footer -->
+<<<<<<< HEAD
+       
+=======
         <footer id="footer">
             <div class="inner">
                 <ul class="copyright">
@@ -79,17 +101,8 @@
             </div>
         </footer>
 
+>>>>>>> 011cb9505fd0d8242a576ad6b83ccac6b619cfec
     </div>
-
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/dashutil.js"></script>
-    <script src="assets/js/dash.js"></script>
-
 </body>
 
 </html>

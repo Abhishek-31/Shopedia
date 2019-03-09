@@ -260,10 +260,11 @@ input, select, textarea {
         float:left;
       }
       #top{
+		    display: inline-block;
           /* position:inline; */
           margin-top:40px;
-          float:left;
-          margin-left: 270px;
+          /* float:left; */
+          margin-left: 28%;
       }
 	@media screen and (max-width: 736px) {
 
