@@ -224,8 +224,27 @@ input, select, textarea {
 
 	h6 {
 		font-size: 0.6rem;
-	}
-
+    }
+    #search{
+        float:left;
+        width: 600px;
+        margin-left: 50px;
+    }
+    .element {
+    /* position:absolute; */
+        /* background-image: url('/assets/loc.png'); */
+        margin-left:10px;
+        border-radius: 50%;
+        width:45px;
+        height:45px;
+        /* border-width: 2px; */
+        float:left;
+      }
+      #top{
+          /* position:inline; */
+          margin-top:40px;
+          float:left;
+      }
 	@media screen and (max-width: 736px) {
 
 		h1 {
@@ -592,9 +611,12 @@ input, select, textarea {
 			border: 0;
 			border-radius: 0;
 			padding: 0;
-		}
-
+        }
+    #quote{
+        margin-top: 30px;
+    }
 /* Icon */
+
 
 	.icon {
 		text-decoration: none;
