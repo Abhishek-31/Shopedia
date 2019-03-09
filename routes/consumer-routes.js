@@ -3,7 +3,7 @@ const router = require('express').Router();
 const Item = require('./../models/items')
 const User = require('./../models/user-models')
 
-const filterShops = require('./../middleware/distance')
+const {filterShops} = require('./../middleware/distance')
 
 router.get('/', (req, res) => {
     res.render('consumer')
