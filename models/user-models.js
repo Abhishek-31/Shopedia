@@ -8,10 +8,19 @@ const userSchema = new Schema({
     shopName: {
         type: String
     },
+    locationString: {
+        type: String
+    },
+    location: {
+        latitude: Number,
+        longitude: Number
+    },
     items: [
         {
-            item: String,
-            number: Number
+            item: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'items'
+            }
         }
     ]
 })
