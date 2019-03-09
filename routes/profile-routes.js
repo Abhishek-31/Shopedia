@@ -43,32 +43,35 @@ router.post('/postshop', authCheck, (req, res) => {
 })
 
 router.post('/postitem', (req, res) => {
-    let itemId
+    var itemId = ""
+    req.body.itemName = req.body.itemName.toLowerCase()
     Item.findOne({itemName: req.body.itemName})
         .then(item => {
             if(item) {
                 // Update item with shop's ID and name
-                Item.findOneAndUpdate({itemName: req.body.itemName}, {$push: {shops: {shopId: req.body.shopId, shopName: req.body.shopName}}})
+                itemId = item._id
+                Item.findOneAndUpdate({itemName: req.body.itemName}, {$push: {shops: {shopId: req.user._id, shopName: req.user.shopName}}})
                 .then(item => res.send(item))
             } else {
                 // Add new item. Tested, working
                 var newitem = {
                     itemName: req.body.itemName,
                     shops: [{
-                        shopName: req.body.shopName
+                        shopName: req.user.shopName,
+                        shopId: req.user._id
                     }]
                 }
                 newitem = new Item(newitem)
                 newitem.save().then(item => {
                     itemId = item._id
-                    console.log(item)
+                    return Promise.resolve()
+                }).then(() => {
+                    User.findOneAndUpdate({ googleId: req.user.googleId }, { $push: { items: { itemName: itemId } } })
+                        .then(user => {
+                            res.send(user)
+                        })
                 })
             }
-        }).then(() => {
-            User.findOneAndUpdate({googleId: req.user.googleId}, {$push: {items: {item: itemId}}})
-            .then(user => {
-                res.send(user)
-            })
         })
 })
 
