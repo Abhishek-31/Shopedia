@@ -31,6 +31,7 @@ app.use('/auth', authRoutes)
 app.use('/profile', profileRoutes)
 
 app.set('view engine', 'hbs');
+app.use(express.static(__dirname+'/views'))
 
 app.get('/', (req, res) => {
     res.render('home', {user: req.user});
