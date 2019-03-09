@@ -3,14 +3,14 @@ function degreesToRadians (degrees) {return degrees * Math.PI / 180
 }
 //Send firstly latitude and secondly longitude. obj will also return the id of shopkeeper.
 
-var filterShops = () => {
-    lat2 = obj.consumer.latitude;
-    lon2 = obj.consumer.longitude;
+var filterShops = (consumer, shops) => {
+    lat2 = consumer.latitude;
+    lon2 = consumer.longitude;
     var a = [];
     obj.shops.forEach(function(shop){ 
         var earthRadiusKm = 6371
-        lat1=b.latitude;
-        lon1=b.longitude;
+        lat1=shops.location.latitude;
+        lon1=shops.location.longitude;
         var dLat = degreesToRadians(lat2 - lat1);
         var dLon = degreesToRadians(lon2 - lon1);
 
@@ -25,4 +25,5 @@ var filterShops = () => {
             return a.distance - b.distance;
         })
 }
-module.exports={ filterShops }
+
+module.exports = { filterShops }
