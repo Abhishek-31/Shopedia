@@ -48,9 +48,14 @@ blockquote, q {
 
 table {
 	border-collapse: collapse;
+	border: 2px solid black;
+	border-color: black;
 	border-spacing: 0;
 }
-
+th,td{
+	padding:15px;
+	border: 2px solid black;
+}
 body {
 	-webkit-text-size-adjust: none;
 }
