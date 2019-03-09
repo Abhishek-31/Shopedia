@@ -225,10 +225,11 @@ input, select, textarea {
 		font-size: 0.6rem;
     }
     #search{
+		display:block;
         float:left;
-				width:50%;
+				/* width:35%; */
 				width:200%;
-        align:center;
+        /* align:center; */
     }
     .card {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -251,19 +252,21 @@ input, select, textarea {
       
           .element {
     /* position:absolute; */
-        /* background-image: url('/assets/loc.png'); */
         /* margin-left:10px; */
         border-radius: 50%;
         width:45px;
         height:45px;
-        /* border-width: 2px; */
-        float:left;
+		/* border-width: 2px; */
+		display:block;
+		 float:left;
       }
       #top{
-		    display: inline-block;
-          /* position:inline; */
-          margin-top:40px;
-          /* float:left; */
+		    /* width:auto; */
+		  /* position:inline; */
+		  display:block;
+		 float:left; 
+		  margin-top:40px;
+          
           margin-left: 28%;
       }
 	@media screen and (max-width: 736px) {
