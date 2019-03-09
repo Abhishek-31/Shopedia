@@ -1,0 +1,279 @@
+@import url("//fonts.googleapis.com/earlyaccess/nanumgothic.css");
+
+
+/* helvetica fonts! */
+/* --------------- English --------------- */
+@font-face {
+  font-family: "helvetica-neue";
+  font-weight: 100;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/41774233-b9da-44be-b252-6a7b612fb1c7.eot?#iefix");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/41774233-b9da-44be-b252-6a7b612fb1c7.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/4bff1fbb-b4bf-4d95-9c47-efcb14384e36.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/7f1f2a7d-3837-4c93-b373-f03c5da3f9a1.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/d9f2752a-8d82-4cf1-b82f-109c1105be7f.svg#d9f2752a-8d82-4cf1-b82f-109c1105be7f") format("svg");
+}
+@font-face {
+  font-family: "helvetica-neue";
+  font-weight: 300;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot?#iefix");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/56be84de-9d60-4089-8df0-0ea6ec786b84.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/50d35bbc-dfd4-48f1-af16-cf058f69421d.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/278bef59-6be1-4800-b5ac-1f769ab47430.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/2e309b1b-08b8-477f-bc9e-7067cf0af0b3.svg#2e309b1b-08b8-477f-bc9e-7067cf0af0b3") format("svg");
+}
+@font-face {
+  font-family: "helvetica-neue";
+  font-weight: 400;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/ae1656aa-5f8f-4905-aed0-93e667bd6e4a.eot?#iefix");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/ae1656aa-5f8f-4905-aed0-93e667bd6e4a.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/530dee22-e3c1-4e9f-bf62-c31d510d9656.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/688ab72b-4deb-4e15-a088-89166978d469.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/7816f72f-f47e-4715-8cd7-960e3723846a.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+@font-face {
+  font-family: "helvetica-neue";
+  font-weight: 500;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/b7693a83-b861-4aa6-85e0-9ecf676bc4d6.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/bcf54343-d033-41ee-bbd7-2b77df3fe7ba.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/b0ffdcf0-26da-47fd-8485-20e4a40d4b7d.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/da09f1f1-062a-45af-86e1-2bbdb3dd94f9.svg#da09f1f1-062a-45af-86e1-2bbdb3dd94f9") format("svg");
+}
+@font-face {
+  font-family: "helvetica-neue";
+  font-weight: 600;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/07fe0fec-b63f-4963-8ee1-535528b67fdb.eot?#iefix");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/07fe0fec-b63f-4963-8ee1-535528b67fdb.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/60be5c39-863e-40cb-9434-6ebafb62ab2b.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/4c6503c9-859b-4d3b-a1d5-2d42e1222415.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/36c182c6-ef98-4021-9b0d-d63122c2bbf5.svg#36c182c6-ef98-4021-9b0d-d63122c2bbf5") format("svg");
+}
+@font-face {
+  font-family: "helvetica-neue";
+  font-weight: 700;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/c07fef9e-a934-42d7-92ad-69205f2b8a00.eot?#iefix");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/c07fef9e-a934-42d7-92ad-69205f2b8a00.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/14ff6081-326d-4dae-b778-d7afa66166fc.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/8fda1e47-19be-46c7-8d83-8d4fb35572f0.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/f751c8ae-1057-46d9-8d74-62592e002568.svg#f751c8ae-1057-46d9-8d74-62592e002568") format("svg");
+}
+@font-face {
+  font-family: "helvetica-neue";
+  font-weight: 900;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/b26ccb58-f2e3-47aa-a83a-02861bf54862.eot?#iefix");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/b26ccb58-f2e3-47aa-a83a-02861bf54862.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/74649485-cd74-443e-9d54-331ccd448900.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/feb77f4f-9e6b-4f88-909a-66199fd402ed.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/2e490192-e531-4236-9c55-90daaad4a34e.svg#2e490192-e531-4236-9c55-90daaad4a34e") format("svg");
+}
+/* --------------- Latin --------------- */
+@font-face {
+  font-family: 'helvetica-neue-latin';
+  font-weight: 300;
+  /*(light)*/
+  font-style: normal;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/30b6ffc3-3b64-40dd-9ff8-a3a850daf535.eot");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/30b6ffc3-3b64-40dd-9ff8-a3a850daf535.eot#iefix") format("embedded-opentype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/775a65da-14aa-4634-be95-6724c05fd522.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/988eaaa7-5565-4f65-bb17-146b650ce9e9.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'helvetica-neue-latin';
+  font-weight: 400;
+  /*(regular)*/
+  font-style: normal;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/ae1656aa-5f8f-4905-aed0-93e667bd6e4a.eot?#iefix");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/ae1656aa-5f8f-4905-aed0-93e667bd6e4a.eot?#iefix") format("eot"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/530dee22-e3c1-4e9f-bf62-c31d510d9656.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/688ab72b-4deb-4e15-a088-89166978d469.ttf") format("truetype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/7816f72f-f47e-4715-8cd7-960e3723846a.svg#7816f72f-f47e-4715-8cd7-960e3723846a") format("svg");
+}
+@font-face {
+  font-family: 'helvetica-neue-latin';
+  font-weight: 500;
+  /*(light bold)*/
+  font-style: normal;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/0b3a3fca-0fad-402b-bd38-fdcbad1ef776.eot");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/0b3a3fca-0fad-402b-bd38-fdcbad1ef776.eot#iefix") format("embedded-opentype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/d5af76d8-a90b-4527-b3a3-182207cc3250.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/1d238354-d156-4dde-89ea-4770ef04b9f9.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'helvetica-neue-latin';
+  font-weight: 700;
+  /*(bold)*/
+  font-style: normal;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/55f60419-09c3-42bd-b81f-1983ff093852.eot");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/55f60419-09c3-42bd-b81f-1983ff093852.eot#iefix") format("embedded-opentype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/5b4a262e-3342-44e2-8ad7-719998a68134.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/4a3ef5d8-cfd9-4b96-bd67-90215512f1e5.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'helvetica-neue-latin';
+  font-weight: 900;
+  /*(black)*/
+  font-style: normal;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/db853e0e-929b-4272-b420-c946c954cf3a.eot");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/db853e0e-929b-4272-b420-c946c954cf3a.eot#iefix") format("embedded-opentype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/4a9c62ab-b359-4081-8383-a0d1cdebd111.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/db5f9ba6-05a4-433a-9461-0a6f257a0c3a.ttf") format("truetype");
+}
+/* --------------- Cyrillic --------------- */
+@font-face {
+  font-family: 'helvetica-neue-cyrillic';
+  font-weight: 300;
+  /*(light)*/
+  font-style: normal;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/93b6bf6a-418e-4a8f-8f79-cb9c99ef3e32.eot");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/93b6bf6a-418e-4a8f-8f79-cb9c99ef3e32.eot#iefix") format("embedded-opentype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/c881c21b-4148-4a11-a65d-f35e42999bc8.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/03634cf1-a9c9-4e13-b049-c90d830423d4.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'helvetica-neue-cyrillic';
+  font-weight: 400;
+  /*(regular)*/
+  font-style: normal;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/5b85c7cc-6ad4-4226-83f5-9d19e2974123.eot");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/5b85c7cc-6ad4-4226-83f5-9d19e2974123.eot#iefix") format("embedded-opentype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/835e7b4f-b524-4374-b57b-9a8fc555fd4e.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/2c694ef6-9615-473e-8cf4-d8d00c6bd973.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'helvetica-neue-cyrillic';
+  font-weight: 500;
+  /*(light bold)*/
+  font-style: normal;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/f1feaed7-6bce-400a-a07e-a893ae43a680.eot");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/f1feaed7-6bce-400a-a07e-a893ae43a680.eot#iefix") format("embedded-opentype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/8ac9e38d-29c6-41ea-8e47-4ae4d2b1a4e1.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/4bd09087-655e-4abb-844c-dccdeb68003d.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'helvetica-neue-cyrillic';
+  font-weight: 700;
+  /*(bold)*/
+  font-style: normal;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/7092fdcc-7036-48ce-ae23-cfbc9be2e3b0.eot");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/7092fdcc-7036-48ce-ae23-cfbc9be2e3b0.eot#iefix") format("embedded-opentype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/5b29e833-1b7a-40ab-82a5-cfd69c8650f4.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/b0298148-2d59-44d1-9ec9-1ca6bb097603.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'helvetica-neue-cyrillic';
+  font-weight: 900;
+  /*(black)*/
+  font-style: normal;
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/41fb73ed-90c8-456d-838e-254f4dfda106.eot");
+  src: url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/41fb73ed-90c8-456d-838e-254f4dfda106.eot#iefix") format("embedded-opentype"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/d85949a1-c37a-43f7-9d09-fb056acf0c27.woff") format("woff"), url("//static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/5289fb0d-053f-4fac-9c67-2d02365d6d05.ttf") format("truetype");
+}
+/* end of css hacks! */
+
+body {
+    font-family: helvetica-neue, helvetica-neue-latin, helvetica-neue-cyrillic, Helvetica, Arial, sans-serif !important;
+}
+
+.components-viewer .component {
+    font-weight: 400 !important;
+}
+
+#root .kb-container .article-page .article-view .component-viewer .text-component {
+    font-weight: 500;
+}
+
+#root .kb-container .article-page .related-articles .articles>li, #root .kb-container .category-page .articles>li, #root .kb-container .home-page .categories>li, #root .kb-container .search-results-page .search-results .articles>li, #root .kb-container .breadcrumbs .category-name, #root .kb-container .article-page .feedback .btn, .heading-component h2, .heading-component h3, .heading-component h4  {
+    font-weight: 500 !important;
+}
+
+#root .kb-container .kb-page .categories>li, #root .kb-container .kb-page .articles > li {
+    color: #20455e  !important;
+     font-weight: 500;
+}
+
+#root .kb-container .kb-page .categories>li:hover, #root .kb-container .kb-page .articles > li:hover {
+    color: #000000  !important;
+    background: #ddf0ff  !important;
+}
+
+#root .kb-container .breadcrumbs .home-link, #root .kb-container .breadcrumbs .category-name.category-link {
+    color: #3899ec;
+}
+
+#root .kb-container .breadcrumbs .home-link:hover, #root .kb-container .breadcrumbs .category-name.category-link:hover {
+   color: #4eb7f5;
+}
+
+#root .kb-container .breadcrumbs .home-link:active, #root .kb-container .breadcrumbs .category-name.category-link:active {
+   color: #3899ec;
+}
+
+#root .kb-container .article-page .feedback .btn {
+    border-color: #3899ec;
+    color: #3899ec;
+}
+
+#root .kb-container .article-page .feedback .btn:hover {
+  background-color: #4eb7f5;
+  border-color: #4eb7f5;
+}
+
+#root .kb-container .article-page .feedback .btn.active {
+   background-color: #3899ec;
+   border-color: #3899ec;
+}
+
+#root .kb-container .article-page .feedback .btn:active {
+  background-color: #3899ec;
+  border-color: #3899ec;
+}
+
+.categories>li:after, .articles>li:after {
+  border-color: #3899ec  !important;
+}
+
+#root .kb-container .article-page .article-view .components-viewer .text-component .link, #root .kb-container .article-page .article-view .components-viewer .text-component a, #root .kb-container .article-page .article-view .components-viewer .informative-component .link, #root .kb-container .article-page .article-view .components-viewer .informative-component a {
+  color: #3899ec;
+}
+
+.header-text, .footer-container, .breadcrumbs, .stores-main-article .feedback-container, 
+#root .kb-container.stores-main-article .back {
+display: none;
+}
+
+#root .kb-container .back {
+color: #20455e !important;
+}
+
+.kb-container .hero-container { 
+color: #20455e !important;
+box-shadow: none !important;
+background-color: #d9e3f0 !important;
+}
+
+.kb-container .search-box #search {
+box-shadow: none !important;
+border: solid 1px #dfe5eb !important;
+}
+
+#root .kb-container.stores-main-article .header-text {
+display: block;
+margin: 38px auto 40px;
+padding: 0 30px;
+}
+
+#root .kb-container.stores-main-article .header-text .title {
+display: block;
+font-size: 30px;
+text-align: center;
+margin-bottom: 10px;
+font-weight: 500;
+}
+
+.stores-main-article .header-text .subTitle{
+display: block;
+font-size: 16px;
+text-align: center;
+line-height: 1.5;
+}
+
+.stores-main-article .search-box{
+margin-bottom: 38px;
+box-shadow: none !important;
+}
+
+#root .kb-container.stores-main-article .inner-content {
+display: flex !important;
+align-items: center;
+justify-content: center;
+}
+
+#root .kb-container.stores-main-article .search-results-page {
+top: 0;
+right: 0;
+}
+
+#root .kb-container.stores-main-article .article-page {
+position: static;
+}
+
+#root .kb-container.stores-main-article .inner-article-content .title{
+display: none !important;
+}
+
+#root .kb-container.stores-main-article .inner-article-content{
+margin-top: 0 !important;
+}
+
+#root .kb-container.stores-main-article .inner-article-content .image-component{
+margin-top: 0 !important;
+}
+
+#root .kb-container.stores-main-article .inner-article-content .image-container{
+border: none !important;
+background: white !important;
+}
+
+#root .kb-container.stores-main-article .inner-article-content .image-container img {
+max-width: 125px !important;
+width: 125px !important;
+}
