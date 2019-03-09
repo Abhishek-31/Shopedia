@@ -227,13 +227,33 @@ input, select, textarea {
     }
     #search{
         float:left;
-        width: 600px;
+        width: 700px;
         margin-left: 50px;
     }
-    .element {
+    .card {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        width: 50%;
+       
+        margin-right: 50px;
+      }
+      
+      .card:hover {
+        box-shadow: 0 8px 16px 0 black;
+      }
+      
+      .container {
+        padding: 2px 16px;
+        color: black;
+        border-radius: 10px;
+
+        background-color: white;
+      }
+      
+          .element {
     /* position:absolute; */
         /* background-image: url('/assets/loc.png'); */
-        margin-left:10px;
+        /* margin-left:10px; */
         border-radius: 50%;
         width:45px;
         height:45px;
@@ -244,6 +264,7 @@ input, select, textarea {
           /* position:inline; */
           margin-top:40px;
           float:left;
+          margin-left: 270px;
       }
 	@media screen and (max-width: 736px) {
 

@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 
 const profileRoutes = require('./routes/profile-routes')
 const authRoutes = require('./routes/routes')
+const consumerRoutes = require('./routes/consumer-routes')
 const passportSetup = require('./config/passport-setup')
 const keys = require('./config/keys')
 
@@ -32,6 +33,7 @@ app.use(express.static(__dirname + '/views'))
 
 app.use('/auth', authRoutes)
 app.use('/profile', profileRoutes)
+app.use('/consumer', consumerRoutes)
 
 app.get('/', (req, res) => {
     res.render('home', {user: req.user});

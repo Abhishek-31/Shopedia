@@ -18,7 +18,8 @@ router.get('/', authCheck, (req, res) => {
 })
 
 router.get('/dashboard', (req, res) => {
-    res.render('dashboard')
+    console.log(req.user)
+    res.render('dashboard', {user: req.user})
 })
 
 // {
