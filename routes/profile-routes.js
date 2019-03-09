@@ -44,7 +44,8 @@ router.post('/postshop', authCheck, (req, res) => {
         })
         .then(user => {
             req.user.shopName = user.shopName
-            res.redirect('/profile/dashboard')
+            res.send(200)
+            // res.redirect('')
         })
 })
 
