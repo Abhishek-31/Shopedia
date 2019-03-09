@@ -17,14 +17,16 @@ router.get('/', authCheck, (req, res) => {
     if(!req.user.shopName) {
         res.render('location_post', {user: req.user})
     } else {
-        var user = addItems(req.user)
+        // var user = addItems(req.user)
+        // console.log(user)
         res.redirect('/profile/dashboard')
     }
 })
 
 router.get('/dashboard', (req, res) => {
-    console.log(req.user)
-    res.render('dashboard', {user: req.user})
+    var user = addItems(req.user)
+    console.log(user)
+    res.render('dashboard', {user: user})
 })
 
 // {
@@ -82,5 +84,20 @@ router.post('/postitem', (req, res) => {
             }
         })
 })
+
+var addItems = (user) => {
+    var allItems = [];
+    // Object.assign(newUser, user)
+    for(var i = 0; i < user.items.length; i++) {
+        Item.findById(user.items[i].itemId)
+        .then(realItem => {
+            console.log(realItem)
+            allItems.push(realItem.name)
+        })
+    }
+    user.items = allItems
+    console.log(user)
+    return user
+}
 
 module.exports = router
