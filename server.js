@@ -10,6 +10,8 @@ const consumerRoutes = require('./routes/consumer-routes')
 const passportSetup = require('./config/passport-setup')
 const keys = require('./config/keys')
 
+const User = require('./models/user-models')
+
 const app = express()
 
 mongoose.connect(keys.mongodb.dbURI, () => console.log('Connected to mongodb'))
@@ -37,6 +39,13 @@ app.use('/consumer', consumerRoutes)
 
 app.get('/', (req, res) => {
     res.render('home', {user: req.user});
+})
+
+app.get('/allshops', (req, res) => {
+    User.find({})
+        .then((users) => {
+            res.send(users)
+        })
 })
 
 app.listen(3000, () => {
