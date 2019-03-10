@@ -6,7 +6,6 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -23,7 +22,8 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+outline:none;}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -161,7 +161,7 @@ input, select, textarea {
 		}
 
 	strong, b {
-		color: #ffffff;
+		color: white;
 		font-weight: 600;
 	}
 
@@ -646,6 +646,8 @@ input, select, textarea {
 		text-decoration: none;
 		border-bottom: none;
 		position: relative;
+		background: url(/views/assets/logo.jpeg);
+		color:black;
 	}
 
 		.icon:before {
@@ -1317,8 +1319,9 @@ input, select, textarea {
 			width: 5.5rem;
 			height: 5.5rem;
 			line-height: 5.5rem;
-			border: solid 1px #ffffff;
+			/* border: solid 1px #ffffff; */
 			border-radius: 100%;
+			background-image: url('logo.jpeg');
 		}
 
 			#header .logo .icon:before {
@@ -1327,7 +1330,7 @@ input, select, textarea {
 
 		#header .content {
 			border-style: solid;
-			border-color: #ffffff;
+			/* border-color: #ffffff; */
 			border-top-width: 1px;
 			border-bottom-width: 1px;
 			max-width: 100%;
