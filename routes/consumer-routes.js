@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
 //     longitude: "long"
 // }
 router.post('/search', (req, res) => {
+    console.log(req.body)
     req.body.itemName = req.body.itemName.toLowerCase()
     Item.findOne({ itemName: req.body.itemName })
         .then(item => {
