@@ -9,13 +9,13 @@
 </head>
 <style>
     .add{
-        font-size:15px;
-        border-radius:50%;
+        font-size:20px;
+
     }
 </style>
 <body>
-       <button value="log out" style="position:fixed;top:20px;padding-bottom:10px;right:20px; background-color:white;z-index:10;color:black"
-            id="LogOut">LogOut</button>
+       <button value="log out" style="margin-left: 1500px; margin-top:30px; top:20px;padding-bottom:10px;right:20px; background-color:white;z-index:10;color:black"
+            id="LogOut">Log Out</button>
 
     <!-- Wrapper -->
     <div id="wrapper">
@@ -24,10 +24,10 @@
         <section id="banner" class="major">
             <div class="inner">
                 <header class="major">
-                    <h1>Hi, my name is {{user.username}}</h1>
+                    <h1 style="text-transform: uppercase;">Hi, my name is {{user.username}}</h1>
                 </header>
                 <div class="content">
-                    <p>{{user.username}},Santa Claus of {{user.shopName}} is providing following items:</p>
+                    <p style="font-size:1em;">{{user.username}},Santa Claus of {{user.shopName}} is providing following items:</p>
                 </div>
             </div>
         </section>
@@ -47,7 +47,7 @@
                                 <td id="0num"><input type="text" id="0inputnum"></td>
                             </tr> --}}
                         </table>
-                    <button class="btn add" type="button" id="submit">+</button>
+                    <button class="btn add" type="button" id="submit">Add more items</button>
                     </div>
                 </section>
                 <section class="split">
