@@ -17,6 +17,7 @@ router.get('/', authCheck, (req, res) => {
     if(!req.user.shopName) {
         res.render('location_post', {user: req.user})
     } else {
+        var user = addItems(req.user)
         res.redirect('/profile/dashboard')
     }
 })

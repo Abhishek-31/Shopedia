@@ -31,7 +31,7 @@ $('#submit').on('click', function (e) {
     $.post('/profile/postshop', { latitude, longitude, locationString, shopName }, function(response) {
         console.log(response)
         if(response == 200) {
-            window.location.href = "/profile/dashboard"
+            window.location = "/profile/dashboard"
         }
     })
 })
