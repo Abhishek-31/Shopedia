@@ -8,12 +8,26 @@
   <center>
     <h2 id="quote">A bargain is something you can’t use at a price you can’t resist!</h2>
 
-  </center>
+  {{!-- </center>
   <div id="top">
-    <input type="text" placeholder="What are you looking to shop for..." id="search">
+    <input type="text" placeholder="What are you looking to shop for..." id="search" required><br><br>
+    <input type="text" name="location" placeholder="Enter location or enable location access" id="location" required>
     <img src="/assets/location.png" alt="lala" class="element" id="clickme">
   </div>
-  <center>
+  <center> --}}
+      <center>
+        <!-- Shopname: <br> -->
+        <input type="text" name="shopName" placeholder="Enter your shop's name" style="width: 50%" required id="shopName"><br>
+        <!-- Location: <br> -->
+        <div style="height: 60px;">
+          <input type="text" name="location" placeholder="Enter location or enable location access" style="width: 50%"
+            required>
+          <img src="/assets/location.png" alt="getlocation" style="height:45px; width:45px" id="clickme">
+        </div>
+        <br>
+        <input type="submit" value="Submit" id="submit"><br>
+        </b>
+      </center>
     <div style="width:1000px; margin-top: 200px;">
       <div class="card">
         <div class="container">
