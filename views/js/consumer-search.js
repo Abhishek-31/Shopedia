@@ -33,7 +33,17 @@ $('#submit').on('click', function (e) {
         if (response === 'No item found') {
             alert('No Shops found selling this item')
         } else {
-            console.log(response)
+            console.log(typeof response)
+            for(var i = 0; i < response.length; i++) {
+                var template = `<div class="card">
+                <div class="container">
+                <h4 style="color: black">${response[i].shopName}</h4>
+                <p>${Math.round(response[i].distance)} km away</p>
+                </div>
+                <br>
+                </div>`
+                $('#results').append(template)
+            }
         }
     })
 })

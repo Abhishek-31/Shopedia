@@ -24,7 +24,7 @@
   <center> --}}
     <center>
       <!-- Shopname: <br> -->
-      <input type="text" name="itemName" placeholder="Enter your shop's name" style="width: 50%" required id="itemName"><br>
+      <input type="text" name="itemName" placeholder="Enter any item that you want to find" style="width: 50%" required id="itemName"><br>
       <!-- Location: <br> -->
       <div style="height: 60px;">
         <input type="text" name="location" placeholder="Enter location or enable location access" style="width: 50%"
@@ -38,23 +38,21 @@
       <input type="submit" value="Submit" id="submit"><br>
     </center>
     <center>
-    <div style="width:1500px; margin-top: 80px;">
-      <div class="card">
+    <div style="width:1500px; margin-top: 80px;" id="results">
+      {{!-- <div class="card">
         <div class="container">
           <h4 style="color: black">Name of the Shop</h4>
           <p>Distance from Consumer's location</p>
         </div>
         <br>
-
-
-      </div>
-      <div class="card">
+      </div> --}}
+      {{!-- <div class="card">
         <div class="container">
           <h4 style="color: black;">Name of the Shop</h4>
           <p>Distance from Consumer's location</p>
         </div>
       </div>
-    </div>
+    </div> --}}
   </center>
   <script src="/js/consumer-search.js"></script>
 </body>
