@@ -69,6 +69,7 @@ router.post('/postitem', (req, res) => {
             if(item) {
                 // Update item with shop's ID and name
                 itemId = item._id
+                console.log('Item exists: ', item)
                 Item.findOneAndUpdate({itemName: req.body.itemName}, {$push: {shops: {shopId: req.user._id, shopName: req.user.shopName}}})
                 .then(item => res.send(item))
             } else {
