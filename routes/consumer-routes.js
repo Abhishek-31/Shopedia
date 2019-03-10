@@ -21,7 +21,7 @@ router.post('/search', (req, res) => {
             if (!item) {
                 res.send('No item found')
             } else {
-               let sortedShops = filterShops({latitude: req.body.latitude, longitude: req.body.longitude}, item.shops) 
+               let sortedShops = filterShops({latitude: 'req.body.latitude', longitude: req.body.longitude}, item.shops) 
                res.send(sortedShops)
             }
         })
