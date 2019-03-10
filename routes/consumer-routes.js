@@ -21,8 +21,31 @@ router.post('/search', (req, res) => {
             if (!item) {
                 res.send('No item found')
             } else {
-               let sortedShops = filterShops({latitude: 'req.body.latitude', longitude: req.body.longitude}, item.shops) 
-               res.send(sortedShops)
+                var shops = item.shops
+                console.log('Inside filterSHops')
+                lat2 = parseFloat(req.body.latitude);
+                lon2 = parseFloat(req.body.longitude);
+                var a = [], i = 0, count = 0
+                while (i < shops.length) {
+                    console.log(i)
+                    User.findById(shops[i].shopId)
+                        .then(shopInfo => {
+                            lat1 = shopInfo.location.latitude;
+                            lon1 = shopInfo.location.longitude;
+                            var distance = Math.sqrt(Math.pow(((lat1 * lat1) - (lat2 * lat2)), 2) + Math.pow((lon1 * lon1) - (lon2 * lon2), 2))
+                            a.push({ distance, id: shopInfo._id, shopName: shopInfo.shopName })
+                            console.log(i)
+                            count++;
+                            if (count === shops.length - 1) {
+                                a.sort(function (a, b) {
+                                    return a.distance - b.distance;
+                                })
+                                console.log(a)
+                                res.send(a)
+                            }
+                        })
+                    i++;
+                }
             }
         })
 })
