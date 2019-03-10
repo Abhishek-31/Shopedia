@@ -4,6 +4,7 @@
     <title>Welcome, Shopkeeper!</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="/css/dash.css" />
 </head>
 <style>
@@ -12,22 +13,6 @@
         border-radius:50%;
     }
 </style>
-<script>
-    function add() {
-
-        var table = document.getElementById("tab");
-        var row=table.insertRow(2);
-var cell1=row.insertCell(0);
-var cell2 = row.insertCell(1);
-var input1=document.createElement("input");
-input1.setAttribute("type","text");
-var input2=document.createElement("input");
-input2.setAttribute("type","text");
-cell1.appendChild(input1);
-cell2.appendChild(input2);
-
-        }
-</script>
 <body>
 
     <!-- Wrapper -->
@@ -55,22 +40,17 @@ cell2.appendChild(input2);
                                 <th>Item</th>
                                 <th>Quantity</th>
                             </tr>
-                            <tr>
-                                <td>Sample Data</td>
-                                <td>SAmple quantity</td>
-                            </tr>
-                            <tr>
-                                <td><input type="text" ></td>
-                                <td><input type="text"></td>
-                            </tr>
+                            {{!-- <tr>
+                                <td id="0item"><input type="text" id="0inputitem"></td>
+                                <td id="0num"><input type="text" id="0inputnum"></td>
+                            </tr> --}}
                         </table>
-                    <button class="btn add" type="button" onclick="add()">+</button>
+                    <button class="btn add" type="button" id="submit">+</button>
                     </div>
                 </section>
                 <section class="split">
                     <section>
                         <div class="contact-method">
-<<<<<<< HEAD
                             <span class="icon alt fa-home"></span>
                             <h3>Address</h3>
                             <span>{{user.address}}</span>
@@ -78,8 +58,6 @@ cell2.appendChild(input2);
                     </section>
                     <section>
                         <div class="contact-method">
-=======
->>>>>>> 011cb9505fd0d8242a576ad6b83ccac6b619cfec
                             <span class="icon alt fa-phone"></span>
                             <h3>Phone</h3>
                             <span><input type="text"></span>
@@ -90,9 +68,6 @@ cell2.appendChild(input2);
         </section>
 
         <!-- Footer -->
-<<<<<<< HEAD
-       
-=======
         <footer id="footer">
             <div class="inner">
                 <ul class="copyright">
@@ -101,8 +76,7 @@ cell2.appendChild(input2);
             </div>
         </footer>
 
->>>>>>> 011cb9505fd0d8242a576ad6b83ccac6b619cfec
     </div>
 </body>
-
+<script src="/js/add-item.js"></script>
 </html>

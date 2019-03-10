@@ -19,6 +19,11 @@ const userSchema = new Schema({
         {
             itemId: {
                 type: String
+            },
+            itemName: String,
+            number: {
+                type: Number,
+                default: 2
             }
         }
     ]
