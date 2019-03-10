@@ -17,14 +17,20 @@ router.get('/', authCheck, (req, res) => {
     if(!req.user.shopName) {
         res.render('location_post', {user: req.user})
     } else {
-        var user = addItems(req.user)
+        // var user = addItems(req.user)
+        // console.log(user)
         res.redirect('/profile/dashboard')
     }
 })
 
 router.get('/dashboard', (req, res) => {
-    console.log(req.user)
-    res.render('dashboard', {user: req.user})
+    var user = addItems(req.user)
+    res.render('dashboard', {user: user})
+})
+
+router.get('/getItems', (req, res) => {
+    // var user = addItems(req.user)
+    res.send(req.user)
 })
 
 // {
@@ -50,8 +56,13 @@ router.post('/postshop', authCheck, (req, res) => {
         })
 })
 
+// {
+//     itemName,
+//     itemNumber
+// }
 router.post('/postitem', (req, res) => {
     var itemId = ""
+    console.log('In POST item', req.body)
     req.body.itemName = req.body.itemName.toLowerCase()
     Item.findOne({itemName: req.body.itemName})
         .then(item => {
@@ -72,15 +83,31 @@ router.post('/postitem', (req, res) => {
                 newitem = new Item(newitem)
                 newitem.save().then(item => {
                     itemId = item._id
-                    return Promise.resolve()
-                }).then(() => {
-                    User.findOneAndUpdate({ googleId: req.user.googleId }, { $push: { items: { itemName: itemId } } })
+                    return Promise.resolve(itemId)
+                }).then((itemId) => {
+                    console.log('In Updating User', itemId)
+                    User.findOneAndUpdate({ googleId: req.user.googleId }, { $push: { items: { itemId: itemId, itemName: req.body.itemName, number: req.body.itemNumber } } })
                         .then(user => {
-                            res.send(user)
+                            req.user = user
+                            console.log(req.user)
+                            res.send(200)
                         })
                 })
             }
         })
 })
+
+var addItems = (user) => {
+    var allItems = [];
+    // Object.assign(newUser, user)
+    for(var i = 0; i < user.items.length; i++) {
+        Item.findById(user.items[i].itemId)
+        .then(realItem => {
+            allItems.push(realItem.name)
+        })
+    }
+    user.items = allItems
+    return user
+}
 
 module.exports = router
